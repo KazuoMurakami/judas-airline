@@ -11,10 +11,10 @@ Objetivos
 Funcionalidades
 
 - Sistema de reservas online para os passageiros.
-- Serviço de bordo com refeições e bebidas.
-- Entretenimento a bordo, como filmes e músicas.
-- Poltronas confortáveis e espaçosas.
-- Equipe de comissários de bordo treinados e capacitados.
+- Serviço de check out e check-in
+- Possibilidade de extensão de viagem.
+- Sistema de credito
+- Possibilidade de agendar futuras viagens
 
 Tecnologias utilizadas
 
