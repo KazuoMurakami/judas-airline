@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Destaque from "@/components/viagens/destaque";
 import Navheader from "@/components/header/nav-header";
+import Feedback from "@/components/viagens/feedback";
 
 export default function Home() {
   return (
@@ -39,6 +40,10 @@ export default function Home() {
         />
       </div>
       <Destaque />
+      <Feedback />
+      <div className="flex justify-center">
+        <Image src="/parceiros.png" width={1200} height={400} />
+      </div>
     </>
   );
 }
