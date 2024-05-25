@@ -3,21 +3,22 @@ import Image from "next/image";
 import Destaque from "@/components/viagens/destaque";
 import Navheader from "@/components/header/nav-header";
 import Feedback from "@/components/viagens/feedback";
+import FooterPage from "@/components/viagens/footer";
 
 export default function Home() {
   return (
-    <>
+    <div className="mx-20 my-10">
       <div className="relative">
         <Navheader />
         <Image
           src="/Decore.png"
           width={800}
           height={800}
-          className="absolute bottom-[-400px] right-[-100px] -z-10"
+          className="absolute bottom-[-20rem] right-[-6.25rem] -z-10"
         />
       </div>
-      <div className="flex mt-10">
-        <div className="w-[600px]">
+      <div className="flex mt-10 justify-center md:justify-normal">
+        <div className="w-[38rem]">
           <span className="text-[#4da768] font-semibold text-lg">
             EXPERIENCIE OQUE O CÉU TE PROPORCIONA
           </span>
@@ -36,14 +37,12 @@ export default function Home() {
           width={300}
           height={300}
           alt="girl"
-          className="absolute top-[200px] right-[50px] md:right-[200px]"
+          className="absolute top-[12.5rem] right-[8.25rem]  max-lg:hidden"
         />
       </div>
       <Destaque />
       <Feedback />
-      <div className="flex justify-center">
-        <Image src="/parceiros.png" width={1200} height={400} />
-      </div>
-    </>
+      <FooterPage />
+    </div>
   );
 }

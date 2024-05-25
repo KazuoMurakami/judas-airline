@@ -2,12 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 export default function Navheader() {
   return (
-    <header className="flex gap-4 justify-between items-center ">
-      <Image src="/logo.png" width={300} height={300} alt="logo" />
-      <div className="flex justify-around md:w-[300px] font-bold">
-        <Link href="/">Voos</Link>
-        <Link href="/">Hotel</Link>
-        <Link href="/">Planos</Link>
+    <header className="flex gap-4 justify-center items-center md:justify-between">
+      <Image
+        src="/logo.png"
+        width={300}
+        height={300}
+        alt="logo"
+        className="hidden md:block"
+      />
+      <div className="flex justify-around font-bold gap-4">
+        <Link href="/Voos">Voos</Link>
+        <Link href="/Hotel">Hotel</Link>
+        <Link href="/Planos">Planos</Link>
       </div>
     </header>
   );

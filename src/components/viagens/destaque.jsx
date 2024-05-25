@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Destaque() {
   return (
-    <div className="flex gap-40 flex-col">
+    <div className="flex gap-28 flex-col">
       <div className="mt-96">
         <h1 className="flex justify-center text-4xl text-black font-bold mb-10">
           Viagens em Destaques
@@ -14,7 +14,7 @@ export default function Destaque() {
               height={300}
               className="rounded-t-lg"
             />
-            <div className=" flex justify-around pt-4">
+            <div className=" flex justify-around pt-4 flex-wrap">
               <span>Canada</span>
               <span>R$5420.00</span>
             </div>
@@ -27,7 +27,7 @@ export default function Destaque() {
               height={300}
               className="rounded-t-lg"
             />
-            <div className=" flex justify-around pt-4">
+            <div className=" flex justify-around pt-4 flex-wrap">
               <span>Irlanda</span>
               <span>R$6100.00</span>
             </div>
@@ -40,7 +40,7 @@ export default function Destaque() {
               height={300}
               className="rounded-t-lg"
             />
-            <div className=" flex justify-around pt-4">
+            <div className=" flex justify-around pt-4 flex-wrap">
               <span>Japão</span>
               <span>R$4800.00</span>
             </div>
@@ -48,7 +48,7 @@ export default function Destaque() {
           </div>
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-around flex-wrap">
         <div className="flex flex-col gap-4">
           <h1 className="text-4xl w-[350px] font-bold">
             Reserve sua próxima viagem em 3 passos fáceis
