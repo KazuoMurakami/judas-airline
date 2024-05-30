@@ -65,6 +65,7 @@ export default function Page() {
         </div>
       </div>
       <section className="">
+        {/* percorre a array hoteis e renderiza cada hotel indicado */}
         {hoteis.map((hotel) => {
           return (
             <div className="flex  h-[15rem] bg-white m-10">

@@ -71,7 +71,7 @@ export default function Voos() {
               </div>
               <div className="flex items-center justify-center gap-4">
                 <span className="flex py-5 ">10 dias de viagem</span>
-                <Link href="/">
+                <Link href="/Voos/Pagamentos">
                   <Button clas>Agende sua viagem!</Button>
                 </Link>
               </div>
