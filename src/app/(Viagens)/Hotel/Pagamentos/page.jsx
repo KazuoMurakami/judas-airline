@@ -48,8 +48,10 @@ export default function page() {
                 <p>taxa: </p>
               </div>
               <div className="font-bold">
-                <p>R${price}.00</p>
-                <p>R$15.00</p>
+                <Suspense fallback="loading">
+                  <p>R${price}.00</p>
+                  <p>R$15.00</p>
+                </Suspense>
               </div>
             </div>
             <div className=" flex justify-around *:font-bold">
