@@ -7,42 +7,42 @@ export default function Voos() {
       id: 1,
       country: "Canada",
       city: "Toronto",
-      price: "R$4000.00",
+      price: 4000.0,
       url: "/imgCity/toronto.jpg",
     },
     {
       id: 2,
       country: "Grecia",
       city: "Míconos",
-      price: "R$3000.00",
+      price: 3000.0,
       url: "/imgCity/grecia.jpeg",
     },
     {
       id: 3,
       country: "Alemanha",
       city: "Colonia",
-      price: "R$2000.00",
+      price: 2000.0,
       url: "/imgCity/reinoUnido.png",
     },
     {
       id: 4,
       country: "Reino Unido",
       city: "Londres",
-      price: "R$4500.00",
+      price: 4500.0,
       url: "/imgCity/reinoUnido.png",
     },
     {
       id: 5,
       country: "Brazil",
       city: "Rio de janeiro",
-      price: "R$1500.00",
+      price: 1500.0,
       url: "/imgCity/rio.jpg",
     },
     {
       id: 6,
       country: "Italia",
       city: "Roma",
-      price: "R$4500.00",
+      price: 4500.0,
       url: "/imgCity/italia.jpeg",
     },
   ]; // array com informação estatica dos países
@@ -67,12 +67,12 @@ export default function Voos() {
                 <span>
                   {city.country}, {city.city}
                 </span>
-                <span>R$5420.00</span>
+                <span>R${city.price}</span>
               </div>
               <div className="flex items-center justify-center gap-4">
                 <span className="flex py-5 ">10 dias de viagem</span>
-                <Link href="/Voos/Pagamentos">
-                  <Button clas>Agende sua viagem!</Button>
+                <Link href={`/Voos/Pagamentos?price=${city.price}`}>
+                  <Button>Agende sua viagem!</Button>
                 </Link>
               </div>
             </div>

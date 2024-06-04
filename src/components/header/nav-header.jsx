@@ -10,10 +10,9 @@ export default function Navheader() {
         alt="logo"
         className="hidden md:block"
       />
-      <div className="flex justify-around font-bold gap-4">
+      <div className="flex justify-around font-bold gap-20">
         <Link href="/Voos">Voos</Link>
         <Link href="/Hotel">Hotel</Link>
-        <Link href="/Planos">Planos</Link>
       </div>
     </header>
   );

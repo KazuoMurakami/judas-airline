@@ -15,9 +15,6 @@ export default function Dashboard({ children }) {
         <Link href={pathname === "/Hotel" ? "/" : "/Hotel"}>
           {pathname === "/Hotel" ? "Home" : "Hotel"}
         </Link>
-        <Link href={pathname === "/Planos" ? "/" : "/Planos"}>
-          {pathname === "/Planos" ? "Home" : "Planos"}
-        </Link>
       </div>
       {children}
       <FooterPage />

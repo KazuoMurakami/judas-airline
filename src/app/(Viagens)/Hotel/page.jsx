@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 const hoteis = [
   {
@@ -9,7 +10,7 @@ const hoteis = [
       avaliacao: "5 estrelas",
       local: "Hotel in The Harbourfront, Toronto",
     },
-    price: "R$4000.00",
+    price: 4000.0,
   },
   {
     logo: "/hotels/alemanha.webp",
@@ -20,7 +21,7 @@ const hoteis = [
       local:
         " Friedrichstr. 96, 10117, Berlim - Alemanha 0.83 km Brandenburg Gate City center",
     },
-    price: "R$3500.00",
+    price: 3500.0,
   },
   {
     logo: "/hotels/japao.jpg",
@@ -30,7 +31,7 @@ const hoteis = [
       avaliacao: "5 estrelas",
       local: "Oikeno-cho 314, Oshikoji-sagaru Muromachi-dori,",
     },
-    price: "R$2000.00",
+    price: 2000.0,
   },
   {
     logo: "/hotels/brasil.webp",
@@ -40,7 +41,7 @@ const hoteis = [
       avaliacao: "5 estrelas",
       local: "Serrão, Vila Mariana, Sao Paulo",
     },
-    price: "R$1500.00",
+    price: 1500.0,
   },
   {
     logo: "/hotels/irlanda.webp",
@@ -50,7 +51,7 @@ const hoteis = [
       avaliacao: "5 estrelas",
       local: " Mary Street Little, Dublin, Ireland",
     },
-    price: "R$3520.00",
+    price: 3520.0,
   },
 ];
 
@@ -85,13 +86,17 @@ export default function Page() {
                 </div>
                 <div className="bg-[#9fe4a6] rounded-md flex flex-col p-4">
                   <div className="flex flex-col">
-                    <h1 className="font-bold text-xl">A partir de R$300.00</h1>
+                    <h1 className="font-bold text-xl">
+                      A partir de R${hotel.price}
+                    </h1>
                     <span className="font-semibold">Parcele em até 12x</span>
                   </div>
                   <span className="mt-4">{hotel.descricao.local}</span>
 
                   <div className="justify-end items-center flex flex-1">
-                    <Button>Agendar</Button>
+                    <Link href={`/Hotel/Pagamentos?price=${hotel.price}`}>
+                      <Button>agendar!</Button>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -20,17 +21,15 @@ import {
 } from "@/components/ui/select";
 
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
-let parcelas = [];
-
-for (let i = 1; i <= 12; i++) {
-  parcelas.push(i);
-}
+let parcelas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 export default function page() {
   const router = useRouter();
   const searchParams = useSearchParams();
+
   const price = searchParams.get("price");
 
   const total = parseInt(price);
@@ -109,7 +108,7 @@ export default function page() {
           </form>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline" onClick={() => router.push("/Voos")}>
+          <Button variant="outline" onClick={() => router.push("/Hotel")}>
             Cancel
           </Button>
           <Button>Pagar</Button>
