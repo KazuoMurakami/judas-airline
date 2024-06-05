@@ -104,7 +104,7 @@ export default function Pagamentos() {
           </form>
         </CardContent>
         <CardFooter className="flex justify-between">
-          <Button variant="outline" onClick={() => router.push("/Hotel")}>
+          <Button variant="outline" onClick={() => router.push("/Voos")}>
             Cancel
           </Button>
           <Button>Pagar</Button>
