@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PaginationDemo } from "@/components/pagination/pagination";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 export const country = [
   {

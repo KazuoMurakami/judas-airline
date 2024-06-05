@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Voos from "./voos";
-
+import { Suspense } from "react";
 export default function Page() {
   return (
     <>
@@ -18,7 +18,9 @@ export default function Page() {
           </h1>
         </div>
       </div>
-      <Voos />
+      <Suspense>
+        <Voos />
+      </Suspense>
     </>
   );
 }
