@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { PaginationDemo } from "@/components/pagination/pagination";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
 
 export const country = [
   {
@@ -27,7 +26,7 @@ export const country = [
     country: "Alemanha",
     city: "Colonia",
     price: 2000.0,
-    url: "/imgCity/reinoUnido.png",
+    url: "/imgCity/alemanha.jpg",
   },
   {
     id: 4,
@@ -50,12 +49,54 @@ export const country = [
     price: 4500.0,
     url: "/imgCity/italia.jpeg",
   },
+  {
+    id: 7,
+    country: "França",
+    city: "Paris",
+    price: 6500.0,
+    url: "/imgCity/franca.jpg",
+  },
+  {
+    id: 8,
+    country: "México",
+    city: "Cidade do México",
+    price: 4000.0,
+    url: "/imgCity/mexico.jpg",
+  },
+  {
+    id: 9,
+    country: "Estados Unidos",
+    city: "Nova York",
+    price: 7000.0,
+    url: "/imgCity/estados-unidos.jpg",
+  },
+  {
+    id: 10,
+    country: "Austrália",
+    city: "Sydney",
+    price: 6800.0,
+    url: "/imgCity/australia.jpg",
+  },
+  {
+    id: 11,
+    country: "Argentina",
+    city: "Buenos Aires",
+    price: 3000.0,
+    url: "/imgCity/argentina.jpg",
+  },
+  {
+    id: 12,
+    country: "África do Sul",
+    city: "Cidade do Cabo",
+    price: 4200.0,
+    url: "/imgCity/africa.jpg",
+  },
 ]; // array com informação estatica dos países
 
 export default function Voos() {
   const searchParams = useSearchParams();
   const page = searchParams.get("page") ?? "1";
-  const per_page = searchParams.get("per_page") ?? "3";
+  const per_page = searchParams.get("per_page") ?? "6";
 
   const start = (Number(page) - 1) * Number(per_page);
   const end = start + Number(per_page);

@@ -21,6 +21,7 @@ import {
 
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useSearchParams, useRouter } from "next/navigation";
+import { DatePickerWithRange } from "@/components/date-picker/date";
 
 export default function Pagamentos() {
   const router = useRouter();
@@ -98,6 +99,7 @@ export default function Pagamentos() {
                       <SelectItem value="12">12x s/juros</SelectItem>
                     </SelectContent>
                   </Select>
+                  <DatePickerWithRange className="pt-4" />
                 </div>
               </div>
             </div>

@@ -14,7 +14,7 @@ export function PaginationDemo() {
   const router = useRouter();
 
   const page = searchParams.get("page") ?? "1";
-  const per_page = searchParams.get("per_page") ?? "3";
+  const per_page = searchParams.get("per_page") ?? "6";
   return (
     <>
       <Pagination>
@@ -29,11 +29,11 @@ export function PaginationDemo() {
               }}
             />
           </PaginationItem>
-          {page} / {Math.ceil(6 / Number(per_page))}
+          {page} / {Math.ceil(9 / Number(per_page))}
           <PaginationItem>
             <PaginationNext
               className={
-                page == Math.ceil(6 / Number(per_page))
+                page == Math.ceil(9 / Number(per_page))
                   ? "pointer-events-none"
                   : ""
               }
