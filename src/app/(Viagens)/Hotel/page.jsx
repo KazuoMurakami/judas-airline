@@ -66,7 +66,7 @@ export default function Page() {
         </div>
       </div>
       <section className="">
-        {/* percorre a array hoteis e renderiza cada hotel indicado */}
+        {/* percorre a array hoteis e renderiza cada hotel indicado, dentro do arg hotel pega as informações do backend */}
         {hoteis.map((hotel) => {
           return (
             <div className="flex  h-[15rem] bg-white m-10">

@@ -19,17 +19,19 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+// rota de pagamentos da rota hotel
+
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useSearchParams, useRouter } from "next/navigation";
 import { DatePickerWithRange } from "@/components/date-picker/date";
 
 export default function Pagamentos() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  const router = useRouter(); // função que pega a rota da url
+  const searchParams = useSearchParams(); // função que pega o parametro da url
 
-  const price = searchParams.get("price");
+  const price = searchParams.get("price"); // pesuiso pelo parametro price que será passado pela url
 
-  const total = parseInt(price);
+  const total = parseInt(price); // transformo em inteiro pois parametros todas vem como string
   return (
     <div className="flex justify-center mt-10">
       <Card className="w-[350px]">
@@ -51,7 +53,8 @@ export default function Pagamentos() {
             </div>
             <div className=" flex justify-around *:font-bold">
               <p>TOTAL:</p>
-              <p>R${total + 15}</p>
+              <p>R${total + 15}</p>{" "}
+              {/* pega o total e soma com 15 que seria a taxa */}
             </div>
           </div>
           <form>
@@ -85,6 +88,7 @@ export default function Pagamentos() {
                       <SelectValue placeholder="Select" />
                     </SelectTrigger>
                     <SelectContent position="popper">
+                      {/* mostra o select das parcelas */}
                       <SelectItem value="1">1x s/juros</SelectItem>
                       <SelectItem value="2">2x s/juros</SelectItem>
                       <SelectItem value="3">3x s/juros</SelectItem>
@@ -107,6 +111,7 @@ export default function Pagamentos() {
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button variant="outline" onClick={() => router.push("/Hotel")}>
+            {/*quando clicar nesse botão redireciona para a rota /hotel novamente */}
             Cancel
           </Button>
           <Button>Pagar</Button>

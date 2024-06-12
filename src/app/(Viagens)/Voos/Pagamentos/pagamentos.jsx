@@ -1,4 +1,5 @@
 "use client";
+import { toast } from "sonner";
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -24,12 +25,12 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { DatePickerWithRange } from "@/components/date-picker/date";
 
 export default function Pagamentos() {
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  const router = useRouter(); // função do react que pega a rota da url
+  const searchParams = useSearchParams(); // função do react que pega os parametros da url
 
-  const price = searchParams.get("price");
+  const price = searchParams.get("price"); // pega o parametro price que é passado pelo page voos
 
-  const total = parseInt(price);
+  const total = parseInt(price); //transforma em inteiro pois os parametros são sempre strings
   return (
     <div className="flex justify-center mt-10">
       <Card className="w-[350px]">
@@ -107,6 +108,7 @@ export default function Pagamentos() {
         </CardContent>
         <CardFooter className="flex justify-between">
           <Button variant="outline" onClick={() => router.push("/Voos")}>
+            {/* button que rediciona para a rota /voos */}
             Cancel
           </Button>
           <Button>Pagar</Button>

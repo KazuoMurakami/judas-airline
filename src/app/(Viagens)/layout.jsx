@@ -1,5 +1,6 @@
 "use client";
 
+import { Toaster } from "@/components/ui/toaster";
 import FooterPage from "@/components/viagens/footer";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,6 +18,7 @@ export default function Dashboard({ children }) {
         </Link>
       </div>
       {children}
+
       <FooterPage />
     </>
   );

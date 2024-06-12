@@ -15,6 +15,8 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
+//componente ja pronto retirado do shadcn então a logica foi feita por eles mesmo e já funciona sem precisar de ajustes
+
 export function DatePickerWithRange({ className }) {
   const [date, setDate] = useState({
     from: new Date(2024, 5, 10),

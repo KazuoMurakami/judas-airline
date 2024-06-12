@@ -1,10 +1,13 @@
-// Import the framework and instantiate it
+/* essa pagina é o backend do servidor onde é gerado o api e onde é inicializado o backend do mongoDB*/
+
 import Fastify from "fastify";
 import { MongoClient, ServerApiVersion } from "mongodb";
 
+// pega a coenxao do banco
 const uri =
   "mongodb+srv://Kazuo:LQLlfTRxrfyOPIx3@clusterjudas.ms0x75s.mongodb.net/?retryWrites=true&w=majority&appName=ClusterJudas";
 
+// inicializa o servidor
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -13,9 +16,13 @@ const client = new MongoClient(uri, {
   },
 });
 
+// entra no db chamado sample airbnb
 const dbName = "sample_airbnb";
+
+// entra no banco
 const db = client.db(dbName);
 
+// fastify é um framework para inicialização de api igual express
 const fastify = Fastify({
   logger: true,
 });
@@ -106,8 +113,7 @@ const country = [
     url: "/imgCity/africa.jpg",
   },
 ];
-
-//
+// declara os paises da pagina de voo
 
 // Declare a route
 fastify.get("/", async function handler(request, reply) {
