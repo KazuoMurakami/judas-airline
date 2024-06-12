@@ -114,7 +114,7 @@ export default function Pagamentos() {
             {/*quando clicar nesse botão redireciona para a rota /hotel novamente */}
             Cancel
           </Button>
-          <Button>Pagar</Button>
+          <Button onClick={() => router.push("/sucesso")}>Pagar</Button>
         </CardFooter>
       </Card>
     </div>

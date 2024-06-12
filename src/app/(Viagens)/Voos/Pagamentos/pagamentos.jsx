@@ -111,7 +111,7 @@ export default function Pagamentos() {
             {/* button que rediciona para a rota /voos */}
             Cancel
           </Button>
-          <Button>Pagar</Button>
+          <Button onClick={() => router.push("/sucesso")}>Pagar</Button>
         </CardFooter>
       </Card>
     </div>
